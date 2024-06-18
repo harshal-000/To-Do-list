@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind tut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        ul li{
+            position: relative;
+        }
+
+        ul li span{
+            position: absolute;
+            right: 5px;
+        }
+
+        .checked{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body class="h-screen flex items-center justify-center bg-blue-400">
+    <div class="w-[300px] bg-white flex flex-col gap-3 sm:w-2/5 rounded-xl">
+        <div class="sm:p-7 p-2 ">
+            <header class="flex justify-between items-center">
+                <h1 class="text-2xl md:font-semibold md:text-4xl sm:text-3xl font-sans text-blue-950">To-Do list</h1>
+                <span class="text-2xl md:text-4xl sm:text-3xl cursor-pointer" id="hide" >&#9776;</span>
+            </header>
+            <div class="w-full flex justify-evenly items-center sm:my-8 my-4 border-2 border-black rounded-xl">
+                <input type="text" id="tskip" placeholder="enter-text" class="sm:w-4/5  h-10 p-1 sm:px-3 text-lg border-none rounded-l-xl">
+                <div class="h-10 w-1/5 sm: mx-auto flex justify-center items-center cursor-pointer" id="Create"><p>Create</p></div>
+            </div>
+            <div id="tasks">
+                <ul class="flex flex-col sm:gap-[20px] sm:text-2xl sm:my-3" id="task-list">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- <ul class="flex items-center sm:text-2xl relative sm:my-3">
+    <li>
+        <input type="radio" class="h-4 p-2">
+    </li>
+    <li class="mx-3">
+        <p>task to be done</p>
+    </li>
+    <li class="absolute right-0">
+        <span>&#10006;</span>
+    </li>
+</ul> -->
